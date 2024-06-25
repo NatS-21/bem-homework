@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Explorer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;400;500;700&family=Alfa+Slab+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="normalize.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">Weather Explorer</div>
+      <button id="clear-all-button" class="clear-all-button">
+        Clear All Cards
+      </button>
+    </header>
+    <main class="main">
+      <div class="weather-grid" id="weather-grid">
+        <div class="weather-grid__item weather-grid__item--add" id="add-card">
+          <button class="add-button">+</button>
+        </div>
+      </div>
+    </main>
+    <div class="modal" id="modal">
+      <div class="modal__content">
+        <span class="modal__close" id="modal-close">&times;</span>
+        <input
+          type="text"
+          id="city-input"
+          class="modal__input"
+          placeholder="Enter city name"
+        />
+        <button id="search-button" class="modal__search-button">Search</button>
+        <div id="city-not-found" class="modal__not-found">City not found</div>
+        <div id="preview-card" class="weather-card weather-card--preview">
+          <div class="weather-card__city" id="preview-city"></div>
+          <div class="weather-card__temperature" id="preview-temperature"></div>
+          <div class="weather-card__condition" id="preview-condition"></div>
+          <div class="weather-card__details" id="preview-details"></div>
+        </div>
+        <button id="add-city-button" class="modal__add-button">Add</button>
+      </div>
+    </div>
+    <div class="modal" id="confirm-modal">
+      <div class="modal__content">
+        <span class="modal__close" id="confirm-modal-close">&times;</span>
+        <p id="confirm-text">Are you sure you want to delete this card?</p>
+        <div class="modal__confirm">
+            <button id="confirm-yes-button" class="modal__confirm-button">
+                Yes
+              </button>
+              <button id="confirm-no-button" class="modal__confirm-button">No</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
